@@ -43,7 +43,6 @@ def data_load(train_path, valid_path, test_path):
     test_y_data = sp.csr_matrix((np.ones_like(test_list[:, 0]),
                  (test_list[:, 0], test_list[:, 1])), dtype='float64',
                  shape=(n_user, n_item))  # test_groundtruth
-    # 2024/07/31 wxl
     inter_num = train_data.nnz + valid_y_data.nnz + test_y_data.nnz
     print(f'inter num: {inter_num}')
     
